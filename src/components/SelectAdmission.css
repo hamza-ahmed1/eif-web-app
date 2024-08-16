@@ -1,0 +1,25 @@
+/* SelectAdmission.css */
+
+/* Ensure the button and menu items are styled appropriately */
+.MuiButton-root {
+  /* margin-left: 20px; */
+  margin: 10px;
+  color: #fff; /* White color for text */
+}
+
+.MuiMenu-paper {
+  background-color: #333; /* Background color for menu */
+}
+
+.MuiMenuItem-root {
+  color: #fff; /* White color for menu items */
+}
+
+/* Optionally style submenu if needed */
+.MuiMenu-paper {
+  border: 1px solid #555; /* Border color for menu */
+}
+
+.MuiMenu-paper .MuiMenuItem-root:hover {
+  background-color: #555; /* Background color on hover */
+}
