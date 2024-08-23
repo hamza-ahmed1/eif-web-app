@@ -4,9 +4,10 @@ import './App.css';
 import Navbar from './components/Navbar';
 import SelectAdmission from './components/SelectAdmission';
 import { ControlledCarousel } from './components/Creousal';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Dummy data components
-const Home = () => <h2>You are in the Home</h2>;
+// const Home = () => <h2>You are in the Home</h2>;
 const Admission = () => <h2>You are in the Admission</h2>;
 const ScholarShipProgram = () => <h2>You are in the ScholarShipProgram</h2>;
 const Affiliation = () => <h2>You are in the Affiliation</h2>;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 // import ExampleCarouselImage from '/assets/Background/islamic.jpg';
+import './Creousal.css'
 
 export function ControlledCarousel() {
   const [index, setIndex] = useState(0);
@@ -10,40 +11,40 @@ export function ControlledCarousel() {
   };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} >
       <Carousel.Item>
       <img
+      
           className="d-block w-100"
-          src="/assets/Background/islamic.jpg"  // Use the relative path from public
+          src="/assets/Background/islamic-white.jpg"  // Use the relative path from public
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <Carousel.Caption className='font-arabic'>
+        <h3>تمكين الأجيال المستقبلية بالإيمان</h3>
+        <p>تقديم التعليم الجيد والدعم الشامل، مسترشدين بالقيم الإسلامية من أجل غدٍ أفضل.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
       <img
           className="d-block w-100"
-          src="/assets/Background/islamic.jpg"  // Use the relative path from public
+          src="/assets/Background/islamic-white.jpg"  // Use the relative path from public
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <Carousel.Caption  className='font-urdu'>
+
+        <h3>ایمان کے ساتھ مستقبل کی نسلوں کو مضبوط کرنا</h3>
+<p>اسلامی اقدار کے تحت معیاری تعلیم اور مکمل مدد فراہم کرنا، ایک روشن کل کے لیے۔</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
       <img
           className="d-block w-100"
-          src="/assets/Background/islamic.jpg"  // Use the relative path from public
+          src="/assets/Background/education.jpg"  // Use the relative path from public
           alt="First slide"
         />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+        <Carousel.Caption  className='font-english'>
+        <h3>Empowering Future Generations with Faith</h3>
+        <p>Providing quality education and holistic support, guided by Islamic values for a brighter tomorrow.</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

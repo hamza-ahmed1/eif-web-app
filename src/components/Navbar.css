@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
   margin: 0;
@@ -15,15 +17,19 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  z-index: 1000;
 }
 
 .navbar {
   height: 60px;
-  background-color: #139CAB;
+  background-color: #35586e; /* Navbar background color */
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
+  /* Add logo styling if necessary */
 }
 
 .menu-icon {
@@ -31,44 +37,63 @@ body {
 }
 
 .nav-elements {
+  flex: 1;
 }
 
 .nav-elements ul {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.nav-elements ul li:not(:last-child) {
-  margin-right: 20px;
+.nav-elements ul li {
+  margin: 0px 20px;
+  position: relative;
+}
+
+.nav-elements ul li:last-child {
+  margin-right: 0; /* Remove margin for the last item */
 }
 
 .nav-elements ul a {
   font-size: 16px;
   font-weight: 400;
-  color: #2f234f;
+  color: #FFF5EB; /* Text color */
   text-decoration: none;
-}
-
-.nav-elements ul a.active {
-  color: #574c4c;
-  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  transition: color 0.3s ease, font-weight 0.3s ease, transform 0.3s ease;
   position: relative;
 }
 
-.nav-elements ul a.active::after {
+.nav-elements ul a:hover,
+.nav-elements ul a.active {
+  color: #FFDD73; /* Hover and active color */
+  font-weight: 400;
+}
+
+/* Underline effect */
+.nav-elements ul a::after {
   content: "";
+  display: block;
   position: absolute;
-  bottom: -4px;
   left: 0;
+  bottom: -2px; /* Adjust based on your font size */
+  width: 0;
+  height: 2px; /* Thickness of the underline */
+  background: #FFDD73; /* Underline color */
+  transition: width 0.3s ease;
+}
+
+.nav-elements ul a:hover::after,
+.nav-elements ul a.active::after {
   width: 100%;
-  height: 2px;
-  background-color: #574c4c;
 }
 
 @media (max-width: 768px) {
-  .nav-elements ul li:not(:last-child) {
-    margin-right: 30px;
+  .nav-elements ul li {
+    margin-right: 30px; /* Adjust spacing for smaller screens */
   }
 }
 
@@ -82,25 +107,29 @@ body {
     position: absolute;
     right: 0;
     top: 60px;
-    background-color: #fef7e5;
-    width: 0px;
+    background-color:  #35586e; /* Background color for mobile menu */
+    width: 0;
     height: calc(100vh - 60px);
     transition: all 0.3s ease-in;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
   }
 
   .nav-elements.active {
-    width: 270px;
+    width: 270px; /* Adjust the width of the mobile menu */
   }
 
   .nav-elements ul {
-    display: flex;
     flex-direction: column;
+    padding: 0;
   }
 
   .nav-elements ul li {
-    margin-right: unset;
-    margin-top: 22px;
+    margin: 10px 0; /* Adjust spacing for mobile items */
+    margin-right: 0; /* Remove margin for mobile */
   }
 }
 

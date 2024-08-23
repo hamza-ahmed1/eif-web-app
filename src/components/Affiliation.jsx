@@ -46,9 +46,9 @@ export default function Affiliation() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Option 1</MenuItem>
-        <MenuItem onClick={handleSubMenuClick}>Option 2</MenuItem>
-        <MenuItem onClick={handleClose}>Option 3</MenuItem>
+        <MenuItem onClick={handleClose}>Government organization</MenuItem>
+        <MenuItem onClick={handleSubMenuClick}>Internatinal organizations</MenuItem>
+        <MenuItem onClick={handleClose}>Educational institutes</MenuItem>
       </Menu>
       <Menu
         id="sub-menu"
@@ -64,7 +64,7 @@ export default function Affiliation() {
           horizontal: 'left',
         }}
       >
-        <MenuItem onClick={handleClose}>Sub Option 1</MenuItem>
+        <MenuItem onClick={handleClose}>UNP</MenuItem>
         <MenuItem onClick={handleClose}>Sub Option 2</MenuItem>
         <MenuItem onClick={handleClose}>Sub Option 3</MenuItem>
       </Menu>
