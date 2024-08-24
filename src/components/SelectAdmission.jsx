@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, MenuItem, Button } from '@mui/material';
 import { ArrowDropDown } from '@mui/icons-material';
-// importing css
-import './SelectAdmission'
 
 export default function SelectAdmission() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -32,11 +30,13 @@ export default function SelectAdmission() {
   return (
     <div>
       <Button
-        aria-controls="simple-menu"
-        aria-haspopup="true"
         onClick={handleClick}
         endIcon={<ArrowDropDown />}
-        sx={{ color: '#fff' }}
+        sx={{
+          textTransform: 'none', // Transforms text to uppercase
+          color: '#fff',// Ensures text color is white
+          fontSize: '16px'
+       }}
       >
         Admissions
       </Button>
@@ -50,11 +50,8 @@ export default function SelectAdmission() {
         <MenuItem onClick={handleSubMenuClick}>Nazra Program (for Quranic reading and recitation)</MenuItem>
         <MenuItem onClick={handleClose}>Underprivileged Student Support Program</MenuItem>
         <MenuItem onClick={handleClose}>School Dropout Prevention Program</MenuItem>
-        <MenuItem onClick={handleClose}>Evening Tuition Assistance Program
-        </MenuItem>
-
+        <MenuItem onClick={handleClose}>Evening Tuition Assistance Program</MenuItem>
       </Menu>
-
     </div>
   );
 }

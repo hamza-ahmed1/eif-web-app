@@ -21,15 +21,19 @@ body {
 }
 
 .navbar {
-  height: 60px;
+  height: 80px;
   background-color: #35586e; /* Navbar background color */
   position: relative;
   display: flex;
   align-items: center;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
-.logo {
-  /* Add logo styling if necessary */
+.logo img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 60px; /* Adjust as needed */
+  margin-right:30px ;
 }
 
 .menu-icon {
@@ -38,19 +42,22 @@ body {
 
 .nav-elements {
   flex: 1;
+  transition: opacity 0.3s ease; /* Smooth transition for menu visibility */
 }
 
 .nav-elements ul {
+
   display: flex;
   align-items: center;
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0px;
 }
 
 .nav-elements ul li {
-  margin: 0px 20px;
+  margin: 5px 30px 0px 0px;
   position: relative;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for list items */
 }
 
 .nav-elements ul li:last-child {
@@ -59,7 +66,8 @@ body {
 
 .nav-elements ul a {
   font-size: 16px;
-  font-weight: 400;
+  margin-bottom: 2px;
+  font-weight: 500;
   color: #FFF5EB; /* Text color */
   text-decoration: none;
   font-family: "Roboto", sans-serif;
@@ -73,7 +81,6 @@ body {
   font-weight: 400;
 }
 
-/* Underline effect */
 .nav-elements ul a::after {
   content: "";
   display: block;
@@ -92,8 +99,12 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav-elements ul {
+    justify-content: center; /* Center align menu items on medium screens */
+  }
+
   .nav-elements ul li {
-    margin-right: 30px; /* Adjust spacing for smaller screens */
+    margin: 10px 0; /* Adjust spacing for smaller screens */
   }
 }
 
@@ -101,25 +112,30 @@ body {
   .menu-icon {
     display: block;
     cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition for menu icon */
   }
 
   .nav-elements {
-    position: absolute;
+    position: fixed; /* Fixed positioning for mobile menu */
     right: 0;
     top: 60px;
     background-color:  #35586e; /* Background color for mobile menu */
     width: 0;
     height: calc(100vh - 60px);
-    transition: all 0.3s ease-in;
+    transition: width 0.3s ease-in-out, opacity 0.3s ease; /* Smooth transition for menu width and opacity */
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-top: 20px;
+    opacity: 0; /* Initially hidden */
+    z-index: 999; /* Ensure menu is above other content */
   }
 
   .nav-elements.active {
     width: 270px; /* Adjust the width of the mobile menu */
+    padding: 45px;
+    opacity: 1; /* Show menu */
   }
 
   .nav-elements ul {
@@ -130,10 +146,17 @@ body {
   .nav-elements ul li {
     margin: 10px 0; /* Adjust spacing for mobile items */
     margin-right: 0; /* Remove margin for mobile */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for list items */
+  }
+
+  .nav-elements.active ul li {
+    opacity: 1; /* Fade in list items */
   }
 }
 
 .hamburger-icon {
   width: 34px; /* Adjust size as needed */
   height: 34px; /* Adjust size as needed */
+  transition: transform 0.3s ease; /* Smooth transition for hamburger icon */
 }

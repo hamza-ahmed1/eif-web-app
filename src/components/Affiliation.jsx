@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, MenuItem, Button } from '@mui/material';
 import { ArrowDropDown } from '@mui/icons-material';
-// importing css
-import './SelectAdmission'
+import './SelectAdmission.css'
 
 export default function Affiliation() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -32,11 +31,12 @@ export default function Affiliation() {
   return (
     <div>
       <Button
-        aria-controls="simple-menu"
-        aria-haspopup="true"
         onClick={handleClick}
         endIcon={<ArrowDropDown />}
-        sx={{ color: '#fff' }}
+        sx={{
+          textTransform: 'none', // Transforms text to uppercase
+          color: '#fff' // Ensures text color is white
+        }}
       >
         Affiliation
       </Button>

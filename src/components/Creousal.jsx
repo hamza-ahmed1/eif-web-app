@@ -33,6 +33,7 @@ export function ControlledCarousel() {
         <Carousel.Caption  className='font-urdu'>
 
         <h3>ایمان کے ساتھ مستقبل کی نسلوں کو مضبوط کرنا</h3>
+  <br/>      
 <p>اسلامی اقدار کے تحت معیاری تعلیم اور مکمل مدد فراہم کرنا، ایک روشن کل کے لیے۔</p>
         </Carousel.Caption>
       </Carousel.Item>

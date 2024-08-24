@@ -20,6 +20,7 @@
   border: 1px solid #555; /* Border color for menu */
 }
 
+
 .MuiMenu-paper .MuiMenuItem-root:hover {
   background-color: #555; /* Background color on hover */
 }
