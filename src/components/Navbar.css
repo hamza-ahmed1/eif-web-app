@@ -78,7 +78,7 @@ body {
 .nav-elements ul a:hover,
 .nav-elements ul a.active {
   color: #FFDD73; /* Hover and active color */
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .nav-elements ul a::after {

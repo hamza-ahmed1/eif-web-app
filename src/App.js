@@ -5,13 +5,14 @@ import Navbar from './components/Navbar';
 import SelectAdmission from './components/SelectAdmission';
 import { ControlledCarousel } from './components/Creousal';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AboutUs from './pages/AboutUs';
 
 // Dummy data components
 // const Home = () => <h2>You are in the Home</h2>;
 const Admission = () => <h2>You are in the Admission</h2>;
 const ScholarShipProgram = () => <h2>You are in the ScholarShipProgram</h2>;
 const Affiliation = () => <h2>You are in the Affiliation</h2>;
-const AboutMIF = () => <h2>You are in the AboutMIF</h2>;
+const AboutMIF = () => <AboutUs/>;
 const ContactUs = () => <h2>You are in the ContactUs</h2>;
 const DonateNow = () => <h2>You are in the DonateNow</h2>;
 

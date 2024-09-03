@@ -24,7 +24,7 @@ export function ControlledCarousel() {
         <p>تقديم التعليم الجيد والدعم الشامل، مسترشدين بالقيم الإسلامية من أجل غدٍ أفضل.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      {/* <Carousel.Item>
       <img
           className="d-block w-100"
           src="/assets/Background/3.jpg"  // Use the relative path from public
@@ -36,7 +36,7 @@ export function ControlledCarousel() {
   <br/>      
 <p>اسلامی اقدار کے تحت معیاری تعلیم اور مکمل مدد فراہم کرنا، ایک روشن کل کے لیے۔</p>
         </Carousel.Caption>
-      </Carousel.Item>
+      </Carousel.Item> */}
       <Carousel.Item>
       <img
           className="d-block w-100"
