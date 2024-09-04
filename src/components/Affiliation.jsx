@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Menu, MenuItem, Button } from '@mui/material';
 import { ArrowDropDown } from '@mui/icons-material';
-import './SelectAdmission.css'
+import './Dropdown.css'; // Make sure this path is correct
+import { useNavigate } from 'react-router-dom';
+
+
 
 export default function Affiliation() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -12,7 +15,8 @@ export default function Affiliation() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleClose = (link) => {
+    window.open(link, '_blank');
     setAnchorEl(null);
     setSubMenuAnchorEl(null);
     setOpenSubMenu(false);
@@ -44,29 +48,16 @@ export default function Affiliation() {
         id="simple-menu"
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
-        onClose={handleClose}
+        onClose={() => handleClose(null)}
       >
-        <MenuItem onClick={handleClose}>Government organization</MenuItem>
-        <MenuItem onClick={handleSubMenuClick}>Internatinal organizations</MenuItem>
-        <MenuItem onClick={handleClose}>Educational institutes</MenuItem>
-      </Menu>
-      <Menu
-        id="sub-menu"
-        anchorEl={subMenuAnchorEl}
-        open={openSubMenu}
-        onClose={handleSubMenuClose}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'right',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-      >
-        <MenuItem onClick={handleClose}>UNP</MenuItem>
-        <MenuItem onClick={handleClose}>Sub Option 2</MenuItem>
-        <MenuItem onClick={handleClose}>Sub Option 3</MenuItem>
+        <MenuItem onClick={() => handleClose('https://swd.sindh.gov.pk/')}>
+          <img src={'/assets/Logo/external_orgs/dgre.png'} alt="Logo" className="menu-item-logo" />
+          <span className="menu-item-title">Social Welfare Department</span>
+        </MenuItem>
+        <MenuItem onClick={() => handleClose('http://www.dgre.gov.pk/')}>
+          <img src={'/assets/Logo/external_orgs/swd.png'} alt="Logo" className="menu-item-logo" />
+          <span className="menu-item-title">Educational institutes</span>
+        </MenuItem>
       </Menu>
     </div>
   );

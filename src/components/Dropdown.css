@@ -1,0 +1,80 @@
+/* Style for the button */
+.MuiButton-root {
+  margin: 10px;
+  color: #fff; /* White color for text */
+  font-size: 16px;
+  background-color: #524885; /* Background color for button */
+  text-transform: none; /* Ensure text is not transformed to uppercase */
+}
+
+/* Style for the menu container */
+.MuiMenu-paper {
+  background-color: #fff; /* Background color for the menu */
+  color: #524885; /* Text color for the menu */
+  border: 1px solid #524885; /* Border color for menu */
+  border-radius: 0; /* Remove border radius for a sharp, pointy menu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for depth */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Ensure full bottom border for all menu items */
+.MuiMenuItem-root {
+  color: #524885; /* Text color for menu items */
+  border-bottom: 1px solid #524885; /* Add full bottom border */
+  padding: 8px 16px; /* Adjust padding for better spacing */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  position: relative; /* Required for the hover effect */
+}
+
+/* Remove border from the last menu item */
+.MuiMenuItem-root:last-child {
+  border-bottom: none; /* No bottom border for the last item */
+}
+
+/* Hover state for menu items */
+.MuiMenuItem-root:hover {
+  background-color: rgba(74, 67, 121, 0.2); /* Background color on hover */
+  color: #524885; /* Text color on hover */
+  transform: translateX(5px); /* Shift to the right on hover */
+}
+
+/* Style for menu item titles and descriptions */
+.menu-item-title {
+  display: block;
+  font-weight: bold;
+  color: #524885; /* Title color */
+}
+
+.menu-item-desc {
+  display: block;
+  font-size: 0.875rem; /* Slightly smaller font size */
+  color: #555; /* Description color */
+}
+
+/* Transition for the menu to enhance the opening effect */
+.MuiMenu-paper-enter {
+  opacity: 0;
+  transform: translateY(-10px); /* Start from above */
+}
+
+.MuiMenu-paper-enter-active {
+  opacity: 1;
+  transform: translateY(0); /* Move to final position */
+}
+
+.MuiMenu-paper-exit {
+  opacity: 1;
+  transform: translateY(0); /* Start exit state */
+}
+
+.MuiMenu-paper-exit-active {
+  opacity: 0;
+  transform: translateY(-10px); /* Move up during exit */
+}
+
+/* logo */
+.menu-item-logo {
+  width: 24px; /* Adjust size as needed */
+  height: 24px; /* Adjust size as needed */
+  margin: 2px;
+}

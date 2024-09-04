@@ -36,6 +36,7 @@
     position: relative;
     z-index: 2; /* Ensure text is above the overlay */
    /* Ensure text is white for contrast */
+ 
 }
 
 .font-english{
@@ -86,6 +87,6 @@
   border-radius: 8px; /* Optional: rounded corners for the caption background */
   max-width: 80%; /* Optional: restrict width for better layout */
   margin: auto; /* Center caption */
-  font-size: 0.8rem;
+  font-size: 130vh;
   
 }

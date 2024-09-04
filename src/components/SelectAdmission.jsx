@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, MenuItem, Button } from '@mui/material';
 import { ArrowDropDown } from '@mui/icons-material';
+import './Dropdown.css'; // Import the CSS file
 
 export default function SelectAdmission() {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -14,18 +15,18 @@ export default function SelectAdmission() {
   const handleClose = () => {
     setAnchorEl(null);
     setSubMenuAnchorEl(null);
-    setOpenSubMenu(false);
+    // setOpenSubMenu(false);
   };
 
-  const handleSubMenuClick = (event) => {
-    setSubMenuAnchorEl(event.currentTarget);
-    setOpenSubMenu(true);
-  };
+  // const handleSubMenuClick = (event) => {
+  //   setSubMenuAnchorEl(event.currentTarget);
+  //   setOpenSubMenu(true);
+  // };
 
-  const handleSubMenuClose = () => {
-    setSubMenuAnchorEl(null);
-    setOpenSubMenu(false);
-  };
+  // const handleSubMenuClose = () => {
+  //   setSubMenuAnchorEl(null);
+  //   setOpenSubMenu(false);
+  // };
 
   return (
     <div>
@@ -33,10 +34,10 @@ export default function SelectAdmission() {
         onClick={handleClick}
         endIcon={<ArrowDropDown />}
         sx={{
-          textTransform: 'none', // Transforms text to uppercase
-          color: '#fff',// Ensures text color is white
+          textTransform: 'none',
+          color: '#fff',
           fontSize: '16px'
-       }}
+        }}
       >
         Admissions
       </Button>
@@ -46,11 +47,24 @@ export default function SelectAdmission() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Hifz Program (for memorizing the Quran)</MenuItem>
-        <MenuItem onClick={handleSubMenuClick}>Nazra Program (for Quranic reading and recitation)</MenuItem>
-        <MenuItem onClick={handleClose}>Underprivileged Student Support Program</MenuItem>
-        <MenuItem onClick={handleClose}>School Dropout Prevention Program</MenuItem>
-        <MenuItem onClick={handleClose}>Evening Tuition Assistance Program</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <span className="menu-item-title">Hifz Program</span> 
+          <span className="menu-item-desc">(Memorize Quran)</span>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <span className="menu-item-title">Nazra Program</span> 
+          <span className="menu-item-desc">(Read Quran)</span>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <span className="menu-item-title">Support</span> 
+          <span className="menu-item-desc">(Underprivileged)</span>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <span className="menu-item-title">Dropout Prevention</span>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <span className="menu-item-title">Evening Tuition</span>
+        </MenuItem>
       </Menu>
     </div>
   );
