@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Menu, MenuItem, Button } from '@mui/material';
 import { ArrowDropDown } from '@mui/icons-material';
 import './Dropdown.css'; // Import the CSS file
+import { bottom } from '@popperjs/core';
 
-export default function SelectAdmission() {
+export default function AboutUs() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [subMenuAnchorEl, setSubMenuAnchorEl] = useState(null);
   const [openSubMenu, setOpenSubMenu] = useState(false);
@@ -39,7 +40,7 @@ export default function SelectAdmission() {
           fontSize: '16px'
         }}
       >
-        Admissions
+        About MIF
       </Button>
       <Menu
         id="simple-menu"
@@ -47,23 +48,32 @@ export default function SelectAdmission() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose} style={{borderBottom:'1px solid rgba(74,67,121,0.6)'}}>
-          <span className="menu-item-title">Hifz Program</span> 
-          <span className="menu-item-desc">(Memorize Quran)</span>
+        <MenuItem onClick={handleClose} style={{ borderBottom: '1px solid rgba(74,67,121,0.6)' }}>
+          <img src={'/assets/Icons/AboutUs/history.png'} alt="Logo" className="menu-item-logo" />
+          <span className="menu-item-title" >History</span>
+
         </MenuItem>
-        <MenuItem onClick={handleClose} style={{borderBottom:'1px solid rgba(74,67,121,0.6)'}}>
-          <span className="menu-item-title">Nazra Program</span> 
-          <span className="menu-item-desc">(Read Quran)</span>
+        <MenuItem onClick={handleClose} style={{ borderBottom: '1px solid rgba(74,67,121,0.6)' }}>
+          <img src={'/assets/Icons/AboutUs/vision.png'} alt="Logo" className="menu-item-logo" />
+
+          <span className="menu-item-title">Vision and Mission</span>
+
         </MenuItem>
-        <MenuItem onClick={handleClose} style={{borderBottom:'1px solid rgba(74,67,121,0.6)'}}>
-          <span className="menu-item-title">Support</span> 
-          <span className="menu-item-desc">(Underprivileged)</span>
+        <MenuItem onClick={handleClose} style={{ borderBottom: '1px solid rgba(74,67,121,0.6)' }}>
+          <img src={'/assets/Icons/AboutUs/international_collabration.png'} alt="Logo" className="menu-item-logo" />
+
+          <span className="menu-item-title">International Collabration</span>
+
         </MenuItem>
-        <MenuItem onClick={handleClose} style={{borderBottom:'1px solid rgba(74,67,121,0.6)'}}>
-          <span className="menu-item-title">Dropout Prevention</span>
+        <MenuItem onClick={handleClose} style={{ borderBottom: '1px solid rgba(74,67,121,0.6)' }}>
+          <img src={'/assets/Icons/AboutUs/events.png'} alt="Logo" className="menu-item-logo" />
+
+          <span className="menu-item-title">Events</span>
         </MenuItem>
         <MenuItem onClick={handleClose} >
-          <span className="menu-item-title">Evening Tuition</span>
+          <img src={'/assets/Icons/AboutUs/campuses.png'} alt="Logo" className="menu-item-logo" />
+
+          <span className="menu-item-title">Campuses</span>
         </MenuItem>
       </Menu>
     </div>

@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import SelectAdmission from './components/SelectAdmission';
 import { ControlledCarousel } from './components/Creousal';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AboutUs from './pages/AboutUs';
+import AboutUs from './components/AboutUs';
 
 // Dummy data components
 // const Home = () => <h2>You are in the Home</h2>;
@@ -22,7 +22,7 @@ const Layout = () => (
   <>
     <Navbar />
     <Outlet />
-  <SelectAdmission/> {/* This is where the routed content will be rendered */}
+
   </>
 );
 
@@ -35,7 +35,7 @@ const App = () => {
         <Route path="admission" element={<Admission />} />
         <Route path="scholarship-program" element={<ScholarShipProgram />} />
         <Route path="affiliation" element={<Affiliation />} />
-      <Route path="About-mif" element={<AboutMIF />} />
+      <Route path="About-mif" element={<AboutMIF/>} />
       <Route path="contact-us" element={<ContactUs />} />
       <Route path="donate-now" element={<DonateNow />} />
 

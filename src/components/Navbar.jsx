@@ -5,6 +5,7 @@ import HamburgerMenu from './HamburgerMenu'; // Import the hamburger menu compon
 import './Navbar.css'; // Ensure you have a CSS file for styling
 import SelectAdmission from './SelectAdmission';
 import Affiliation from './Affiliation';
+import AboutUs from './AboutUs';
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -53,7 +54,7 @@ const Navbar = () => {
               <NavLink to="/scholarship-program" onClick={handleShowNavbar}>Scholarship Program</NavLink>
             </li>
             <li>
-              <NavLink to="/about-mif" onClick={handleShowNavbar}>About MIF</NavLink>
+             <AboutUs/>
             </li>
             <li>
               <NavLink to="/contact-us" onClick={handleShowNavbar}>Contact Us</NavLink>

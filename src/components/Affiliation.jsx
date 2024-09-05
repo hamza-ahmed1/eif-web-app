@@ -16,7 +16,11 @@ export default function Affiliation() {
   };
 
   const handleClose = (link) => {
-    window.open(link, '_blank');
+    if(link)
+    {
+      window.open(link, '_blank');
+    }
+    
     setAnchorEl(null);
     setSubMenuAnchorEl(null);
     setOpenSubMenu(false);
@@ -50,13 +54,13 @@ export default function Affiliation() {
         open={Boolean(anchorEl)}
         onClose={() => handleClose(null)}
       >
-        <MenuItem onClick={() => handleClose('https://swd.sindh.gov.pk/')}>
-          <img src={'/assets/Logo/external_orgs/dgre.png'} alt="Logo" className="menu-item-logo" />
+        <MenuItem onClick={() => handleClose('https://swd.sindh.gov.pk/')} style={{borderBottom:'2px solid   rgba(74,67,121,0.6)'}}>
+          <img src={'/assets/Logo/external_orgs/swd.png'} alt="Logo" className="menu-item-logo" />
           <span className="menu-item-title">Social Welfare Department</span>
         </MenuItem>
-        <MenuItem onClick={() => handleClose('http://www.dgre.gov.pk/')}>
-          <img src={'/assets/Logo/external_orgs/swd.png'} alt="Logo" className="menu-item-logo" />
-          <span className="menu-item-title">Educational institutes</span>
+        <MenuItem onClick={() => handleClose('http://www.dgre.gov.pk/')} >
+          <img src={'/assets/Logo/external_orgs/dgre.png'} alt="Logo" className="menu-item-logo" />
+          <span className="menu-item-title">DGRE</span>
         </MenuItem>
       </Menu>
     </div>
