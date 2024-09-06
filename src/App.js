@@ -6,6 +6,7 @@ import SelectAdmission from './components/SelectAdmission';
 import { ControlledCarousel } from './components/Creousal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AboutUs from './components/AboutUs';
+import Footer from './components/Footer';
 
 // Dummy data components
 // const Home = () => <h2>You are in the Home</h2>;
@@ -22,6 +23,9 @@ const Layout = () => (
   <>
     <Navbar />
     <Outlet />
+    <Footer/>
+
+
 
   </>
 );
