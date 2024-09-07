@@ -40,7 +40,7 @@ export default function Footer() {
                 About Us
               </h6>
               <p>
-                At MIF, we provide a nurturing environment for spiritual and educational growth. As Pakistan's first madrasa committed to quality education for all eligible students, we proudly support over 200 students with Islamic education, academic support, and social welfare.
+                At MIF, we provide a nurturing environment for spiritual and educational growth. As Pakistan's first madrasa committed to quality education for all eligible students, we proudly support over 200+ students with Islamic education, academic support, and social welfare.
               </p>
             </MDBCol>
 
