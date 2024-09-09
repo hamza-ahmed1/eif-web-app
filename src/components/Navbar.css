@@ -67,7 +67,7 @@ body {
 .nav-elements ul a {
   font-size: 16px;
   margin-bottom: 2px;
-  font-weight: 500;
+  font-weight: 300;
   color: #FFF5EB; /* Text color */
   text-decoration: none;
   font-family: "Roboto", sans-serif;
@@ -78,7 +78,6 @@ body {
 .nav-elements ul a:hover,
 .nav-elements ul a.active {
   color: #FFDD73; /* Hover and active color */
-  font-weight: 500;
 }
 
 .nav-elements ul a::after {

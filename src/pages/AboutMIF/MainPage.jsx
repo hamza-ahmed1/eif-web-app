@@ -2,7 +2,8 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import MainCard from '../../components/AboutMIFPageComp/MainCard';
+import MainCard from '../../components/AboutMIFPageComp/MainCard/MainCard';
+import History from '../../components/AboutMIFPageComp/History/Intro';
 
 
 export default function ColorTabs({tab}) {
@@ -25,7 +26,7 @@ React.useEffect(()=>{
 const renderContent = () => {
     switch (value) {
       case 'history':
-        return <div>Content for Item history</div>;
+        return <History/>;
       case 'vision':
         return <div>Content for Item Two</div>;
       case 'international_collabration':
@@ -41,8 +42,9 @@ const renderContent = () => {
 
   return (
     <Box sx={{ width: '100%' }}>
-        {/* <MainCard/> */}
+        <MainCard/>
       <Tabs
+      className='mx-5'
         value={value}
         onChange={handleChange}
         textColor="secondary"

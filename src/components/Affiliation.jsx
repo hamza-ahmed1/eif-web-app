@@ -42,11 +42,13 @@ export default function Affiliation() {
         onClick={handleClick}
         endIcon={<ArrowDropDown />}
         sx={{
+          fontSize:'16px',
+          fontWeight:'300',
           textTransform: 'none', // Transforms text to uppercase
           color: '#fff' // Ensures text color is white
         }}
       >
-        Affiliation
+        Affiliations
       </Button>
       <Menu
         id="simple-menu"

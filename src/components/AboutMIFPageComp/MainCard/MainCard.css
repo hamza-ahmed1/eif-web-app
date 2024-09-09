@@ -1,0 +1,42 @@
+/* MainCard.css */
+
+/* Ensure the card has a specific height */
+.card-container {
+    height: 200px; /* Set to a fixed height like pixels or viewport units */
+    max-height: 250px;
+    position: relative; /* Positioning context for the overlay */
+    overflow: hidden; /* Hide overflow to keep things neat */
+}
+
+.card-image {
+    height: 100%;
+    object-fit:fill; /* Ensure the image covers the container */
+    filter: brightness(0.5); /* Darken the image slightly for better text visibility */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background to make text stand out */
+    color: white;
+    text-align: center;
+    z-index: 1; /* Ensure overlay is on top of the image */
+}
+
+/* Ensure the card title and text have appropriate styles */
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}

@@ -46,7 +46,8 @@ export default function AboutUs() {
         sx={{
           textTransform: 'none',
           color: '#fff',
-          fontSize: '16px'
+          fontSize:'16px',
+          fontWeight:'300',
         }}
       >
         About MIF
