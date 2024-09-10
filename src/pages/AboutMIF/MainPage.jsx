@@ -52,6 +52,14 @@ const renderContent = () => {
           variant="scrollable"
   scrollButtons="auto"
         aria-label="secondary tabs example"
+        sx={{
+          '& .MuiTabs-indicator': {
+            backgroundColor: '#3097a1', // Color of the active tab indicator
+          },
+          '& .Mui-selected': {
+            color: '#3097a1', // Color of the active tab text
+          },
+        }}
       >
         <Tab value="history" label="History" />
         <Tab value="vision" label="Vision and Mission" />

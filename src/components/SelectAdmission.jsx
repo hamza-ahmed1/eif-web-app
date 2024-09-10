@@ -50,21 +50,15 @@ export default function SelectAdmission() {
       >
         <MenuItem onClick={handleClose} style={{borderBottom:'1px solid rgba(74,67,121,0.6)'}}>
           <span className="menu-item-title">Hifz Program</span> 
-          <span className="menu-item-desc">(Memorize Quran)</span>
         </MenuItem>
         <MenuItem onClick={handleClose} style={{borderBottom:'1px solid rgba(74,67,121,0.6)'}}>
           <span className="menu-item-title">Nazra Program</span> 
-          <span className="menu-item-desc">(Read Quran)</span>
         </MenuItem>
         <MenuItem onClick={handleClose} style={{borderBottom:'1px solid rgba(74,67,121,0.6)'}}>
-          <span className="menu-item-title">Support</span> 
-          <span className="menu-item-desc">(Underprivileged)</span>
+          <span className="menu-item-title" >Dropout Prevention Program</span>
         </MenuItem>
-        <MenuItem onClick={handleClose} style={{borderBottom:'1px solid rgba(74,67,121,0.6)'}}>
-          <span className="menu-item-title">Dropout Prevention</span>
-        </MenuItem>
-        <MenuItem onClick={handleClose} >
-          <span className="menu-item-title">Evening Tuition</span>
+        <MenuItem onClick={handleClose}>
+          <span className="menu-item-title">Evening Tuition Program</span>
         </MenuItem>
       </Menu>
     </div>

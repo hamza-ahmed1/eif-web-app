@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Menu, MenuItem, Button } from '@mui/material';
 import { ArrowDropDown } from '@mui/icons-material';
-import './Dropdown.css'; // Make sure this path is correct
+import '../../Dropdown.css'; // Make sure this path is correct
 import { useNavigate } from 'react-router-dom';
 
 
 
-export default function Affiliation() {
+export default function SelectLanguages() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [subMenuAnchorEl, setSubMenuAnchorEl] = useState(null);
   const [openSubMenu, setOpenSubMenu] = useState(false);
@@ -48,7 +48,7 @@ export default function Affiliation() {
           color: '#fff' // Ensures text color is white
         }}
       >
-        Affiliations
+        Language
       </Button>
       <Menu
         id="simple-menu"
@@ -56,13 +56,21 @@ export default function Affiliation() {
         open={Boolean(anchorEl)}
         onClose={() => handleClose(null)}
       >
-        <MenuItem onClick={() => handleClose('https://swd.sindh.gov.pk/')} style={{borderBottom:'2px solid   rgba(74,67,121,0.6)'}}>
-          <img src={'/assets/Logo/external_orgs/swd.png'} alt="Logo" className="menu-item-logo" />
-          <span className="menu-item-title">Social Welfare Department</span>
+        <MenuItem onClick={() => handleClose('https://swd.sindh.gov.pk/')}>
+          <img src={'/assets/Icons/Language/english.png'} alt="Logo" className="menu-item-logo" />
+          <span className="menu-item-title">English</span>
         </MenuItem>
         <MenuItem onClick={() => handleClose('http://www.dgre.gov.pk/')} >
-          <img src={'/assets/Logo/external_orgs/dgre.png'} alt="Logo" className="menu-item-logo" />
-          <span className="menu-item-title">Ministry Of Fedaral Education</span>
+          <img src={'/assets/Icons/Language/urdu.png'} alt="Logo" className="menu-item-logo" />
+          <span className="menu-item-title">اردو</span>
+        </MenuItem>
+        <MenuItem onClick={() => handleClose('http://www.dgre.gov.pk/')} >
+          <img src={'/assets/Icons/Language/arabic.png'} alt="Logo" className="menu-item-logo" />
+          <span className="menu-item-title">العربية</span>
+        </MenuItem>
+        <MenuItem onClick={() => handleClose('http://www.dgre.gov.pk/')} >
+          <img src={'/assets/Icons/Language/persian.png'} alt="Logo" className="menu-item-logo" />
+          <span className="menu-item-title">فارسی</span>
         </MenuItem>
       </Menu>
     </div>

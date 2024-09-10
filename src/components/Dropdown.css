@@ -17,7 +17,7 @@
 .MuiMenuItem-root {
   color: #524885; /* Text color for menu items */
   border-bottom: 1px solid #524885; /* Add full bottom border */
-  padding: 16px 16px; /* Adjust padding for better spacing */
+  padding: 14px 14px; /* Adjust padding for better spacing */
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
   position: relative; /* Required for the hover effect */
 }
@@ -41,7 +41,7 @@
   font-weight: 100;
   font-style: normal;
   /* font-weight: bold; */
-
+  font-size: 12px;
   color: #524885; /* Title color */
 }
 

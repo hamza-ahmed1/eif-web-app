@@ -16,7 +16,7 @@ export function ControlledCarousel() {
       <img
       
           className="d-block w-100"
-          src="/assets/Background/1.png"  // Use the relative path from public
+          src="/assets/Background/home_page.png"  // Use the relative path from public
           alt="First slide"
         />
         <Carousel.Caption className='font-arabic'>
@@ -40,7 +40,7 @@ export function ControlledCarousel() {
       <Carousel.Item>
       <img
           className="d-block w-100"
-          src="/assets/Background/3.jpg"  // Use the relative path from public
+          src="/assets/Background/home_page.png"  // Use the relative path from public
           alt="First slide"
         />
         <Carousel.Caption  className='font-english'>

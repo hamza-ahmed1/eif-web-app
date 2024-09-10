@@ -65,7 +65,7 @@ body {
 }
 
 .nav-elements ul a {
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 2px;
   font-weight: 300;
   color: #FFF5EB; /* Text color */
@@ -107,7 +107,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .menu-icon {
     display: block;
     cursor: pointer;
