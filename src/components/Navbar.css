@@ -1,5 +1,5 @@
+/* Import fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-/* roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
@@ -9,31 +9,32 @@ body {
   background-color: #fcfcfc;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  z-index: 1000;
-}
-
 .navbar {
   height: 80px;
   background-color: #35586e; /* Navbar background color */
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center; /* Center content horizontally */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center; /* Center container content */
+  align-items: center;
+  height: 100%;
+  z-index: 1000;
 }
 
 .logo img {
   max-width: 100%;
   height: auto; /* Maintain aspect ratio */
   max-height: 60px; /* Adjust as needed */
-  margin-right:30px ;
+  margin-right: 30px;
 }
 
 .menu-icon {
@@ -42,20 +43,21 @@ body {
 
 .nav-elements {
   flex: 1;
+  display: flex;
+  justify-content: center; /* Center menu items horizontally */
   transition: opacity 0.3s ease; /* Smooth transition for menu visibility */
 }
 
 .nav-elements ul {
-
   display: flex;
   align-items: center;
   list-style-type: none;
   padding: 0;
-  margin: 0px;
+  margin: 0;
 }
 
 .nav-elements ul li {
-  margin: 5px 30px 0px 0px;
+  margin: 0 15px; /* Space between menu items */
   position: relative;
   transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for list items */
 }
@@ -66,11 +68,11 @@ body {
 
 .nav-elements ul a {
   font-size: 1rem;
-  margin-bottom: 2px;
   font-weight: 300;
   color: #FFF5EB; /* Text color */
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  white-space: nowrap; /* Prevent text from wrapping */
   transition: color 0.3s ease, font-weight 0.3s ease, transform 0.3s ease;
   position: relative;
 }
@@ -98,18 +100,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav-elements ul {
-    justify-content: center; /* Center align menu items on medium screens */
-  }
-
-  .nav-elements ul li {
-    margin: 10px 0; /* Adjust spacing for smaller screens */
-  }
-}
-
-@media (max-width: 1000px) {
   .menu-icon {
-    display: block;
+    display: block; /* Show hamburger menu on small screens */
     cursor: pointer;
     transition: transform 0.3s ease; /* Smooth transition for menu icon */
   }
@@ -118,7 +110,7 @@ body {
     position: fixed; /* Fixed positioning for mobile menu */
     right: 0;
     top: 60px;
-    background-color:  #35586e; /* Background color for mobile menu */
+    background-color: #35586e; /* Background color for mobile menu */
     width: 0;
     height: calc(100vh - 60px);
     transition: width 0.3s ease-in-out, opacity 0.3s ease; /* Smooth transition for menu width and opacity */
@@ -152,10 +144,7 @@ body {
   .nav-elements.active ul li {
     opacity: 1; /* Fade in list items */
   }
-}
-
-.hamburger-icon {
-  width: 34px; /* Adjust size as needed */
-  height: 34px; /* Adjust size as needed */
-  transition: transform 0.3s ease; /* Smooth transition for hamburger icon */
+  img.hamburger-icon {
+    height: 2.5rem;
+  }
 }

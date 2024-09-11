@@ -50,7 +50,7 @@ export default function AboutUs() {
           fontWeight:'300',
         }}
       >
-        About MIF
+        AboutMIF
       </Button>
       <Menu
         id="simple-menu"

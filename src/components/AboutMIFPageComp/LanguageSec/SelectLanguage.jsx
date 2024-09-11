@@ -4,10 +4,10 @@ import { ArrowDropDown } from '@mui/icons-material';
 import '../../Dropdown.css'; // Make sure this path is correct
 import { useNavigate } from 'react-router-dom';
 
-
-
 export default function SelectLanguages() {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [selectedValue, setSelectedValue] = useState("English");
+  const [selectedValueLogo, setSelectedValueLogo] = useState("/assets/Icons/Language/english.png"); // Default text for the button
   const [subMenuAnchorEl, setSubMenuAnchorEl] = useState(null);
   const [openSubMenu, setOpenSubMenu] = useState(false);
 
@@ -15,23 +15,21 @@ export default function SelectLanguages() {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = (link) => {
-    if(link)
+  const handleClose = (logo_link,language) => {
+    // check if both are MT
+    if(!logo_link && !language)
     {
-      window.open(link, '_blank');
+          alert("language is not available");
     }
+
+    if (logo_link && language) {
+      setSelectedValue(language);
+      setSelectedValueLogo(logo_link);
+    }
+
     
+  // Update the button text with the selected language
     setAnchorEl(null);
-    setSubMenuAnchorEl(null);
-    setOpenSubMenu(false);
-  };
-
-  const handleSubMenuClick = (event) => {
-    setSubMenuAnchorEl(event.currentTarget);
-    setOpenSubMenu(true);
-  };
-
-  const handleSubMenuClose = () => {
     setSubMenuAnchorEl(null);
     setOpenSubMenu(false);
   };
@@ -42,33 +40,34 @@ export default function SelectLanguages() {
         onClick={handleClick}
         endIcon={<ArrowDropDown />}
         sx={{
-          fontSize:'16px',
-          fontWeight:'300',
-          textTransform: 'none', // Transforms text to uppercase
-          color: '#fff' // Ensures text color is white
+          fontSize: '16px',
+          fontWeight: '300',
+          textTransform: 'none',
+          color: '#fff'
         }}
       >
-        Language
+          <img src={selectedValueLogo} alt="Select" className="menu-item-logo" />
+        {selectedValue} {/* Display selected language */}
       </Button>
       <Menu
         id="simple-menu"
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
-        onClose={() => handleClose(null)}
+        onClose={() => handleClose(null, selectedValue)}
       >
-        <MenuItem onClick={() => handleClose('https://swd.sindh.gov.pk/')}>
+        <MenuItem onClick={()=>{handleClose('/assets/Icons/Language/english.png','English')}}>
           <img src={'/assets/Icons/Language/english.png'} alt="Logo" className="menu-item-logo" />
           <span className="menu-item-title">English</span>
         </MenuItem>
-        <MenuItem onClick={() => handleClose('http://www.dgre.gov.pk/')} >
+        <MenuItem onClick={()=>{handleClose(null,null)}}>
           <img src={'/assets/Icons/Language/urdu.png'} alt="Logo" className="menu-item-logo" />
           <span className="menu-item-title">اردو</span>
         </MenuItem>
-        <MenuItem onClick={() => handleClose('http://www.dgre.gov.pk/')} >
+        <MenuItem onClick={()=>{handleClose(null,null)}}>
           <img src={'/assets/Icons/Language/arabic.png'} alt="Logo" className="menu-item-logo" />
           <span className="menu-item-title">العربية</span>
         </MenuItem>
-        <MenuItem onClick={() => handleClose('http://www.dgre.gov.pk/')} >
+        <MenuItem onClick={()=>{handleClose(null,null)}}>
           <img src={'/assets/Icons/Language/persian.png'} alt="Logo" className="menu-item-logo" />
           <span className="menu-item-title">فارسی</span>
         </MenuItem>
