@@ -1,7 +1,9 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export default function Footer() {
+  const navigate=useNavigate();
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
@@ -37,7 +39,7 @@ export default function Footer() {
             <MDBCol md='4' lg='4' xl='3' className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon color='secondary' icon='gem' className='me-3' />
-                About Us
+                MADARSA TUL ISHAQ FAROOQI
               </h6>
               <p>
                 At MIF, we provide a nurturing environment for spiritual and educational growth. As Pakistan's first madrasa committed to quality education for all eligible students, we proudly support over 200+ students with Islamic education, academic support, and social welfare.
@@ -61,10 +63,20 @@ export default function Footer() {
             </MDBCol>
 
             <MDBCol md='4' lg='4' xl='3' className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Our Vision</h6>
+              <h6 className='text-uppercase fw-bold mb-4'>Home</h6>
               <p>
-                Empowering underprivileged students and orphans through high-quality education and support to create opportunities for a brighter future.
+                <a onClick={()=>{navigate('/about/history')}} className='text-reset'>About Us</a>
               </p>
+              <p>
+                <a onClick={()=>{navigate('/scholarship-program')}} className='text-reset'>Scholarship Programs</a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>Admissions</a>
+              </p>
+              <p>
+                <a href='#!' className='text-reset'>Affiliations</a>
+              </p>
+
             </MDBCol>
 
             <MDBCol md='4' lg='4' xl='3' className='mx-auto mb-md-0 mb-4'>

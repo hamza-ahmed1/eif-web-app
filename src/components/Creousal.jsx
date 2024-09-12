@@ -20,7 +20,7 @@ export function ControlledCarousel() {
           alt="First slide"
         />
         <Carousel.Caption className='font-arabic'>
-        <h3>تمكين الأجيال المستقبلية بالإيمان</h3>
+        <h1>تمكين الأجيال المستقبلية بالإيمان</h1 >
         <p>تقديم التعليم الجيد والدعم الشامل، مسترشدين بالقيم الإسلامية من أجل غدٍ أفضل.</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -44,7 +44,7 @@ export function ControlledCarousel() {
           alt="First slide"
         />
         <Carousel.Caption  className='font-english'>
-        <h3>Empowering Future Generations with Faith</h3>
+        <h1>Empowering Future Generations with Faith</h1>
         <p>Providing quality education and holistic support, guided by Islamic values for a brighter tomorrow.</p>
         </Carousel.Caption>
       </Carousel.Item>

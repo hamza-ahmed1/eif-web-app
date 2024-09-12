@@ -33,8 +33,11 @@
 }
 
 .carousel-caption {
-    position: relative;
+    position: fixed;
     z-index: 2; /* Ensure text is above the overlay */
+    top: 12rem;
+    align-content: center;
+    
    /* Ensure text is white for contrast */
  
 }
@@ -53,7 +56,7 @@
   border-radius: 8px; /* Optional: rounded corners for the caption background */
   max-width: 80%; /* Optional: restrict width for better layout */
   margin: auto; /* Center caption */
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .font-arabic{
@@ -70,7 +73,7 @@
   border-radius: 8px; /* Optional: rounded corners for the caption background */
   max-width: 80%; /* Optional: restrict width for better layout */
   margin: auto; /* Center caption */
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .font-urdu{
